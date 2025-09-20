@@ -1,7 +1,7 @@
 $baseDir = Resolve-Path .\
 $buildDir = "$baseDir\build"
 $sourceDir = "$baseDir\src"
-$projectName = "Buckler.NET"
+$projectName = "CurrenSee"
 $unitTestPath = "$sourceDir\$projectName.Tests"
 $projectPath = "$sourceDir\$projectName"
 $dotnetCliVerbosity = "m"
@@ -29,7 +29,7 @@ function UnitTests {
 
 function CopyOutput {
     Write-Output "Copying validated build to output"
-    $outputPath = "$projectPath\bin\$buildConfiguration\net8.0"
+    $outputPath = "$projectPath\bin\$buildConfiguration\net9.0"
     Copy-Item "$outputPath" -Destination "$buildDir\$buildConfiguration" -Recurse
 }
 

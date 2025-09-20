@@ -1,4 +1,6 @@
 ﻿using CurrenSee.Endpoints;
+using CurrenSee.Endpoints.Currencies;
+using CurrenSee.Endpoints.LatestExchangeRate;
 using CurrenSee.Network;
 
 namespace CurrenSee

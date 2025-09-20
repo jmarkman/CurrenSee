@@ -2,7 +2,7 @@
 using CurrenSee.Network;
 using System.Text.Json;
 
-namespace CurrenSee.Endpoints
+namespace CurrenSee.Endpoints.Currencies
 {
     public class CurrenciesEndpoint(CurrenSeeHttp currenseeHttp) : ICurrenciesEndpoint
     {

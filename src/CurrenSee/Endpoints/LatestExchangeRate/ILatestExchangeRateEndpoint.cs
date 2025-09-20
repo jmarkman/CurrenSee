@@ -1,6 +1,6 @@
 ﻿using CurrenSee.Models;
 
-namespace CurrenSee.Endpoints
+namespace CurrenSee.Endpoints.LatestExchangeRate
 {
     public interface ILatestExchangeRateEndpoint
     {
