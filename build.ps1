@@ -1,4 +1,9 @@
-$baseDir = Resolve-Path .\
+$baseDir = Resolve-Path $PSScriptRoot
+
+if ((Split-Path $baseDir -Leaf) -eq "src") {
+    $baseDir = Resolve-Path ..
+}
+
 $buildDir = "$baseDir\build"
 $debugDir = "$buildDir\debug"
 $sourceDir = "$baseDir\src"
@@ -20,8 +25,6 @@ function Init {
     } else {
         throw "Unknown build configuration: $buildConfiguration"
     }
-
-    New-Item -Path $buildDir -ItemType Directory > $null 
 
     Write-Output "Clean & restore solution"
     & dotnet clean "$sourceDir\$projectName.sln" --nologo -v $dotnetCliVerbosity
